@@ -9,6 +9,15 @@ const AddUser = props => {
 
     const addUserHandler = (event) => {
         event.preventDefault();
+        if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0){
+            console.log("Empty field");
+            return;
+        }
+        // + converts String to Number
+        if (+enteredAge < 1){
+            console.log("Age cannot be ZERO");
+            return;
+        }
         console.log(enteredUsername, enteredAge);
         setEnteredUsername('');
         setEnteredAge('');
