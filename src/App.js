@@ -11,7 +11,8 @@ function App() {
   const addUserHandler = (uName, uAge) =>{
       const objUser = {
         name: uName,
-        age: uAge
+        age: uAge,
+        id: Math.random().toString()
       };
       
       setUsersList( (prevUsersList) =>{
